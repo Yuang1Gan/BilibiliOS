@@ -9,8 +9,9 @@ def screensize():
     return a
 def read_bgp_name():
     f = open('背景名', 'r', encoding = 'utf-8')
-    f.read()
+    n = f.read()
     f.close()
+    return n
 a = screensize()
 big = a.split('X')
 width = big[0]
@@ -19,7 +20,7 @@ height = big[1]
 WIDTH = int(width)
 HEIGHT = int(height)
 state = '开机'  #系统状态
-name = 'bilibili2023拜年纪1'  #标准背景
+name = read_bgp_name()  #标准背景
 #图标定义
 IMVI = Actor('imvi')
 c = Actor('change')
